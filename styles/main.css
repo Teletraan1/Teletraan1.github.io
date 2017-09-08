@@ -1,0 +1,50 @@
+html {
+  background-color: white;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 4.2358rem;
+  line-height: 67.77282px;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 2.61792rem;
+  line-height: 41.88678px;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 1.618rem;
+  line-height: 25.888px;
+  font-weight: 100;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section.banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100wh;
+}
+
+section.banner h1 {
+  line-height: 0;
+}
+
+.content {
+  width: 67%;
+}
+ 
+
+ /*# sourceMappingURL= main.css.map */

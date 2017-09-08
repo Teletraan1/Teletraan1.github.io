@@ -1,0 +1,62 @@
+@import '_functions';
+
+$prime:#D95A00; 
+$white: lighten($prime, 95%);
+$black: darken($prime, 95%);
+$base-font-size: 16;
+$base-font: 'Montserrat', sans-serif;
+$ratio: 1.618;
+
+html {
+    background-color: $white;
+    color: $black;
+    font-family: $base-font;
+    font-size: $base-font-size *1px;
+    font-weight: 200;
+
+}
+
+h1 {
+    $value: pow($ratio, 3);
+    font-size: $value * 1rem;
+    line-height: line-height($base-font-size, $value, 1px);
+    font-weight: 100;
+}
+
+h2 {
+    $value: pow($ratio, 2);
+    font-size: $value * 1rem;
+    line-height: line-height($base-font-size, $value, 1px);
+    font-weight: 100;
+}
+
+h3 {
+    $value: pow($ratio, 1);
+    font-size: $value * 1rem;
+    line-height: line-height($base-font-size, $value, 1px);
+    font-weight: 100;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    &.banner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100wh;
+
+        h1 {
+            line-height: 0;
+        }        
+    }
+}
+
+.content {
+    width: 67%;
+}
