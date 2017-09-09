@@ -1,3 +1,75 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: outrun;
+  src: url("fonts/outrun.otf") format("opentype");
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 html {
   background-color: white;
   color: black;
@@ -24,26 +96,72 @@ h3 {
   font-weight: 100;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #D95A00;
 }
 
 section.banner {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  width: 100wh;
 }
 
-section.banner h1 {
-  line-height: 0;
-}
-
-.content {
+section .banner-content {
   width: 67%;
+}
+
+section .banner-title {
+  margin-left: -0.38rem;
+}
+
+section .banner-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 100%;
+}
+
+section .banner-nav li {
+  list-style-type: none;
+  padding-right: 1.618rem;
+  padding-top: 1.618rem;
+  font-size: 1.3rem;
+}
+
+section .banner-nav li:nth-child(1) {
+  animation: fadein;
+  animation-duration: 3s;
+}
+
+section .banner-nav li:nth-child(3) {
+  animation: fadein;
+  animation-duration: 4s;
+}
+
+section .banner-nav li:nth-child(5) {
+  animation: fadein;
+  animation-duration: 5s;
+}
+
+section.modern {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #431155;
+}
+
+section.modern .modern-title {
+  color: white;
+  font-family: 'outrun', cursive;
 }
  
 
