@@ -190,6 +190,12 @@ section.retro .retro-title--alt {
   margin-top: -75px;
   float: right;
 }
+
+@media only screen and (max-width: 512px) {
+  h1 {
+    font-size: 2.61792rem;
+  }
+}
  
 
  /*# sourceMappingURL= main.css.map */

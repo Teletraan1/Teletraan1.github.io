@@ -137,3 +137,10 @@ section {
     margin-top: -75px;
     float: right;
 }
+
+@media only screen and (max-width: 512px) {
+    h1 {
+        $value: pow($ratio, 2);
+        font-size: $value * 1rem;
+    }
+}
