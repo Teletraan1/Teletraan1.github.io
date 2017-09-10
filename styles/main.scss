@@ -138,20 +138,22 @@ section {
 @media screen and (max-width: 512px) {
     
     section {
+        
+        .banner-title {
+            $value: pow($ratio, 2);
+            font-size: $value * 1rem;
+            line-height: line-height($base-font-size, $value, 1px);
+        }
+        
         .banner-nav {
             li {
             
                 font-size: 1rem;
             }
         }
-    }
-    
 
-    h1 {
-        $value: pow($ratio, 2);
-        font-size: $value * 1rem;
-        &.banner-title {
-            line-height: line-height($base-font-size, $value, 1px);
+        .retro-title--alt {
+            word-spacing: -0.618rem;
         }
     }
 

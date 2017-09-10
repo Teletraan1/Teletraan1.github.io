@@ -186,14 +186,15 @@ section.retro .retro-title--alt {
 }
 
 @media screen and (max-width: 512px) {
+  section .banner-title {
+    font-size: 2.61792rem;
+    line-height: 41.88678px;
+  }
   section .banner-nav li {
     font-size: 1rem;
   }
-  h1 {
-    font-size: 2.61792rem;
-  }
-  h1.banner-title {
-    line-height: 41.88678px;
+  section .retro-title--alt {
+    word-spacing: -0.618rem;
   }
   h2 {
     font-size: 1.618rem;
