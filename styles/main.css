@@ -194,6 +194,7 @@ section.retro .retro-title--alt {
   }
   h1.banner-title {
     line-height: 36.65094px;
+    margin-left: -0.15rem;
   }
   h2 {
     font-size: 1.618rem;

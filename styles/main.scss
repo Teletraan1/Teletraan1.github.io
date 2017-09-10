@@ -150,6 +150,7 @@ section {
         font-size: $value * 1rem;
         &.banner-title {
             line-height: line-height(14, $value, 1px);
+            margin-left: -0.15rem;
         }
     }
 
