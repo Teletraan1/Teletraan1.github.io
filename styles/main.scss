@@ -138,27 +138,29 @@ section {
 @media screen and (max-width: 512px) {
     
     section {
-        
-        .banner-title {
-            $value: pow($ratio, 2);
-            font-size: $value * 1rem;
-            line-height: line-height($base-font-size, $value, 1px);
-        }
-        
         .banner-nav {
             li {
-            
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
-        }
+        }      
+    }
 
-        .retro-title--alt {
-            word-spacing: -0.618rem;
+    h1 {
+        $value: pow($ratio, 2);
+        font-size: $value * 1rem;
+        &.banner-title {
+            line-height: line-height(14, $value, 1px);
         }
     }
 
     h2 {
         $value: pow($ratio, 1);
         font-size: $value * 1rem;
+    }
+
+    h3 {
+        &.retro-title--alt {
+            word-spacing: -0.5rem;
+        }
     }
 }
