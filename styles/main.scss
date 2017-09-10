@@ -87,10 +87,12 @@ section {
             }
             &:nth-child(3) {
                 animation: fadein;
-                animation-duration: 4s}
+                animation-duration: 4s
+            }
             &:nth-child(5) {
                 animation: fadein;
-                animation-duration: 5s}
+                animation-duration: 5s
+            }
         }
     }
 
@@ -123,14 +125,8 @@ section {
 
 .sun {
     background: rgba(255,255,0,1);
-    background: -moz-linear-gradient(top, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 36%, rgba(227,0,45,1) 67%, rgba(252,47,245,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,0,1)), color-stop(36%, rgba(255,140,0,1)), color-stop(67%, rgba(227,0,45,1)), color-stop(100%, rgba(252,47,245,1)));
-    background: -webkit-linear-gradient(top, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 36%, rgba(227,0,45,1) 67%, rgba(252,47,245,1) 100%);
-    background: -o-linear-gradient(top, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 36%, rgba(227,0,45,1) 67%, rgba(252,47,245,1) 100%);
-    background: -ms-linear-gradient(top, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 36%, rgba(227,0,45,1) 67%, rgba(252,47,245,1) 100%);
     background: linear-gradient(to bottom, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 36%, rgba(227,0,45,1) 67%, rgba(252,47,245,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#fc2ff5', GradientType=0 );
-
+    
     border-radius: 999px;
     height: 125px;
     width: 125px;
@@ -138,9 +134,29 @@ section {
     float: right;
 }
 
-@media only screen and (max-width: 512px) {
+
+@media screen and (max-width: 512px) {
+    
+    section {
+        .banner-nav {
+            li {
+            
+                font-size: 1rem;
+            }
+        }
+    }
+    
+
     h1 {
         $value: pow($ratio, 2);
+        font-size: $value * 1rem;
+        &.banner-title {
+            line-height: line-height($base-font-size, $value, 1px);
+        }
+    }
+
+    h2 {
+        $value: pow($ratio, 1);
         font-size: $value * 1rem;
     }
 }

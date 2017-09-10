@@ -177,13 +177,7 @@ section.retro .retro-title--alt {
 
 .sun {
   background: yellow;
-  background: -moz-linear-gradient(top, yellow 0%, darkorange 36%, #e3002d 67%, #fc2ff5 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, yellow), color-stop(36%, darkorange), color-stop(67%, #e3002d), color-stop(100%, #fc2ff5));
-  background: -webkit-linear-gradient(top, yellow 0%, darkorange 36%, #e3002d 67%, #fc2ff5 100%);
-  background: -o-linear-gradient(top, yellow 0%, darkorange 36%, #e3002d 67%, #fc2ff5 100%);
-  background: -ms-linear-gradient(top, yellow 0%, darkorange 36%, #e3002d 67%, #fc2ff5 100%);
   background: linear-gradient(to bottom, yellow 0%, darkorange 36%, #e3002d 67%, #fc2ff5 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#fc2ff5', GradientType=0 );
   border-radius: 999px;
   height: 125px;
   width: 125px;
@@ -191,9 +185,18 @@ section.retro .retro-title--alt {
   float: right;
 }
 
-@media only screen and (max-width: 512px) {
+@media screen and (max-width: 512px) {
+  section .banner-nav li {
+    font-size: 1rem;
+  }
   h1 {
     font-size: 2.61792rem;
+  }
+  h1.banner-title {
+    line-height: 41.88678px;
+  }
+  h2 {
+    font-size: 1.618rem;
   }
 }
  
