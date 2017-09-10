@@ -150,7 +150,7 @@ section .banner-nav li:nth-child(5) {
   animation-duration: 5s;
 }
 
-section.modern {
+section.retro {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,9 +159,36 @@ section.modern {
   background-color: #431155;
 }
 
-section.modern .modern-title {
+section.retro .retro-title {
   color: white;
+  text-shadow: 3px 2px #f90ac8;
   font-family: 'outrun', cursive;
+  transform: rotate(-15deg);
+}
+
+section.retro .retro-title span {
+  font-size: 80px;
+}
+
+section.retro .retro-title--alt {
+  font-family: "Press Start 2P", cursive;
+  color: cyan;
+}
+
+.sun {
+  background: yellow;
+  background: -moz-linear-gradient(top, yellow 0%, darkorange 36%, #e3002d 67%, #fc2ff5 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, yellow), color-stop(36%, darkorange), color-stop(67%, #e3002d), color-stop(100%, #fc2ff5));
+  background: -webkit-linear-gradient(top, yellow 0%, darkorange 36%, #e3002d 67%, #fc2ff5 100%);
+  background: -o-linear-gradient(top, yellow 0%, darkorange 36%, #e3002d 67%, #fc2ff5 100%);
+  background: -ms-linear-gradient(top, yellow 0%, darkorange 36%, #e3002d 67%, #fc2ff5 100%);
+  background: linear-gradient(to bottom, yellow 0%, darkorange 36%, #e3002d 67%, #fc2ff5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#fc2ff5', GradientType=0 );
+  border-radius: 999px;
+  height: 125px;
+  width: 125px;
+  margin-top: -75px;
+  float: right;
 }
  
 

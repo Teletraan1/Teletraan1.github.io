@@ -6,10 +6,11 @@
 $prime:#D95A00; 
 $white: lighten($prime, 95%);
 $black: darken($prime, 95%);
-$modern: #5E2971;
-$modern-light: lighten($modern, 95%);
+$retro: #5E2971;
+$retro-light: lighten($retro, 95%);
 $base-font-size: 16;
 $base-font: 'Montserrat', sans-serif;
+$mordern-font-alt: 'Press Start 2P', cursive;
 $ratio: 1.618;
 
 html {
@@ -93,7 +94,7 @@ section {
         }
     }
 
-    &.modern {
+    &.retro {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -102,10 +103,37 @@ section {
 
         background-color: #431155;
 
-        .modern-title {
-            color: $modern-light;
-            
+        .retro-title {
+            color: $retro-light;
+            text-shadow: 3px 2px #f90ac8;
             font-family: 'outrun', cursive;
+            transform: rotate(-15deg);
+
+            span {
+                font-size: 80px;
+            }
+        }
+
+        .retro-title--alt {
+            font-family: $mordern-font-alt;
+            color: cyan;
         }
     }
+}
+
+.sun {
+    background: rgba(255,255,0,1);
+    background: -moz-linear-gradient(top, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 36%, rgba(227,0,45,1) 67%, rgba(252,47,245,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,0,1)), color-stop(36%, rgba(255,140,0,1)), color-stop(67%, rgba(227,0,45,1)), color-stop(100%, rgba(252,47,245,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 36%, rgba(227,0,45,1) 67%, rgba(252,47,245,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 36%, rgba(227,0,45,1) 67%, rgba(252,47,245,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 36%, rgba(227,0,45,1) 67%, rgba(252,47,245,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 36%, rgba(227,0,45,1) 67%, rgba(252,47,245,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#fc2ff5', GradientType=0 );
+
+    border-radius: 999px;
+    height: 125px;
+    width: 125px;
+    margin-top: -75px;
+    float: right;
 }
