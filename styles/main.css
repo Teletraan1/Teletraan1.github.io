@@ -97,7 +97,7 @@ li:before {
   background: #D95A00;
   display: flex;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .site header section.profile {
