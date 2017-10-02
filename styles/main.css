@@ -48,17 +48,16 @@ table {
   border-spacing: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 html {
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: outrun;
-  src: url("fonts/outrun.otf") format("opentype");
+  font-size: 18px;
 }
 
 @keyframes fadein {
@@ -71,137 +70,176 @@ html {
 }
 
 html {
-  background-color: white;
-  color: black;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 200;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 4.2358rem;
-  line-height: 67.77282px;
-  font-weight: 100;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-h2 {
-  font-size: 2.61792rem;
-  line-height: 41.88678px;
-  font-weight: 100;
-}
-
-h3 {
-  font-size: 1.618rem;
-  line-height: 25.888px;
-  font-weight: 100;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #D95A00;
-}
-
-section.banner {
+body {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.618;
 }
 
-section .banner-content {
-  width: 67%;
+li:before {
+  content: "\00BB \0020";
 }
 
-section .banner-title {
-  margin-left: -0.38rem;
-}
-
-section .banner-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
+.site {
   width: 100%;
 }
 
-section .banner-nav li {
-  list-style-type: none;
-  padding-right: 1.618rem;
-  padding-top: 1.618rem;
-  font-size: 1.3rem;
+.site header {
+  background: #D95A00;
+  display: flex;
+  justify-content: center;
 }
 
-section .banner-nav li:nth-child(1) {
-  animation: fadein;
-  animation-duration: 3s;
-}
-
-section .banner-nav li:nth-child(3) {
-  animation: fadein;
-  animation-duration: 4s;
-}
-
-section .banner-nav li:nth-child(5) {
-  animation: fadein;
-  animation-duration: 5s;
-}
-
-section.retro {
+.site header section.profile {
   display: flex;
   flex-direction: column;
+}
+
+.site header section.profile .photo {
+  display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #431155;
+  padding: 1.618rem 0;
 }
 
-section.retro .retro-title {
+.site header section.profile .photo .photo-frame {
+  border: 4px solid #0e0600;
+  margin: 1.618rem;
+}
+
+.site header section.profile .photo .photo-frame.diamond {
+  overflow: hidden;
+  transform: rotate(45deg);
+  width: 200px;
+  height: 200px;
+}
+
+.site header section.profile .photo .photo-frame.diamond .image {
+  width: 282px;
+  height: 282px;
+  transform: rotate(-45deg) translatex(5px) translateY(-64px);
+  background-image: url("https://placehold.it/282");
+}
+
+.site header section.profile .description {
+  text-align: center;
+  padding: 1.618rem 0;
+}
+
+.site header section.profile .description h1 {
+  font-size: 1.618rem;
+  text-transform: uppercase;
+  letter-spacing: 0.618rem;
+  margin-left: 10px;
+}
+
+.site header section.profile .description h2 {
+  font-size: 1.272rem;
+}
+
+.site header section.profile .links {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2.618rem;
+  padding: 0.618rem 0;
+  margin-bottom: 1.618rem;
+}
+
+.site header section.profile .links a {
+  color: #0e0600;
+  border: 4px solid #0e0600;
+  transform: rotate(45deg);
+  font-size: 1.618rem;
+  padding: 2px 7px;
+  transition: all 0.3s ease;
+}
+
+.site header section.profile .links a:hover {
+  box-shadow: inset 0 0 0 25px #0e0600;
   color: white;
-  text-shadow: 3px 2px #f90ac8;
-  font-family: 'outrun', cursive;
-  transform: rotate(-15deg);
 }
 
-section.retro .retro-title span {
-  font-size: 80px;
+.site header section.profile .links a i {
+  line-height: inherit;
+  transform: rotate(-45deg);
 }
 
-section.retro .retro-title--alt {
-  font-family: "Press Start 2P", cursive;
-  color: cyan;
+.site main {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.sun {
-  background: yellow;
-  background: linear-gradient(to bottom, yellow 0%, darkorange 36%, #e3002d 67%, #fc2ff5 100%);
-  border-radius: 999px;
-  height: 125px;
-  width: 125px;
-  margin-top: -75px;
-  float: right;
+.site main h2 {
+  color: white;
+  font-size: 2.427rem;
+  font-weight: 900;
+  background: #0e0600;
+  display: inline-block;
+  padding: 0.618rem 1.618rem;
+  text-transform: uppercase;
 }
 
-@media screen and (max-width: 512px) {
-  section .banner-nav li {
-    font-size: 1.1rem;
-  }
-  h1 {
-    font-size: 2.61792rem;
-  }
-  h1.banner-title {
-    line-height: 36.65094px;
-    margin-left: -0.15rem;
-  }
-  h2 {
-    font-size: 1.618rem;
-  }
-  h3.retro-title--alt {
-    word-spacing: -0.5rem;
-  }
+.site main h3 {
+  font-size: 1.618rem;
+}
+
+.site main section {
+  padding: 1.618rem 0;
+}
+
+.site main section:first-of-type {
+  padding-top: 0;
+}
+
+.site main section h2 {
+  margin-left: -1.618rem;
+}
+
+.site main section.skills p {
+  color: #0e0600;
+  padding: 1rem;
+  line-height: 1.618;
+}
+
+.site main section.skills ul {
+  columns: 2;
+  list-style-position: inside;
+}
+
+.site main section.skills ul li {
+  font-size: 1.618rem;
+  padding: 0 1.618rem;
+}
+
+.site main section.skills ul li span {
+  font-size: 18px;
+}
+
+.site main section .content {
+  margin: 1.618rem 2.618rem;
+  text-align: left;
+}
+
+.site main section .content header {
+  margin-bottom: 1.618rem;
+}
+
+.site main section .content .group {
+  margin: 1.618rem 0;
+}
+
+.site section {
+  max-width: 960px;
 }
  
 

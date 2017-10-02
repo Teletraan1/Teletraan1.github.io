@@ -4,31 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Dan Sherwood</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,400|Sedgwick+Ave|Press+Start+2P" rel="stylesheet">
+    <script src="https://use.fontawesome.com/52fc329e65.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css" type="text/css">
   </head>
   <body>
-    <main>
-        <section class="banner">
-          <div class="banner-content">
-            <h1 class="banner-title">Dan Sherwood</h1>
-            <h2 class="banner-title--alt">Software Developer</h2>
-            <nav class="banner-nav">
-              <li><a href="#retro">retro</a></li>
-              <li>|</li>
-              <li><a href="#">classic</a></li>
-              <li>|</li>
-              <li><a href="#">minimal</a></li>
-            </nav>
+    <div class="site">
+      <header>
+        <section class="profile">
+            <div class="photo">
+              <div class="photo-frame diamond">
+                <div class="image"></div>
+              </div>
+            </div>
+            <div class="description">
+              <h1>Dan Sherwood</h1>
+              <h2>Software Developer</h2>
+            </div>
+            <div class="links">
+              <a href=""><i class="fa fa-envelope fa-fw"></i></a>
+              <a href=""><i class="fa fa-github fa-fw"></i></a>
+              <a href=""><i class="fa fa-linkedin fa-fw"></i></a>
+            </div>
+        </section>
+      </header>
+      <main>
+        <section class="skills">
+          <h2>Skills</h2>
+          <div class="content">
+            <div class="group">
+              <h3>Technical</h3>
+              <ul>
+                <li><span>.Net</span></li>
+                <li><span>T-SQL</span></li>
+                <li><span>Web API 2</span></li>
+    
+                <li><span>CSS/SASS</span></li>
+                <li><span>JQuery</span></li>
+                <li><span>Gulp</span></li>
+              </ul>
+            </div>
+            <div class="group">
+              <h3>Tooling</h3>
+              <ul>
+                <li><span>Visual Studio 2017</span></li>
+                <li><span>VS Team Services</span></li>
+                <li><span>Sitecore 8+</span></li>
+                <li><span>SQL Server MS</span></li>
+                <li><span>Azure</span></li>
+                <li><span>Git</span></li>
+              </ul>
+            </div>
           </div>
         </section>
-        <section id="retro" class="retro">
-          <div class="retro-content">
-            <h3 class="retro-title--alt">Welcome to</h3>  
-            <h1 class="retro-title"><span>R</span>etro Wave</h1>
-            <div class="sun"></div>
-          </div>
+        <section class="experience">
+          <h2>Experience</h2>
+          <div class="content">
+              <h3>Software Developer Systems Analyst</h3>
+              <h4>Bow Valley College</h4>
+              <ul>
+                <li>Developed a secure RESTful .NET Web API 2 web service to integrate Sitecore CMS with Agresso
+                  ERP to manage Continuing Education course payments and registrations.</li>
+                  <li>Streamlined Help Desk student support process by developing an ASP MVC 5 application which
+                    integrated with Active Directory and Agresso to allow staff to manage student accounts.</li>
+                    <li>Designed and developed an automated console application to synchronize staff information
+                      between Agresso, Active Directory, and Outlook which produced nightly email reports.</li>
+                      <li>Integrated ADFS single sign-on into middleware and SAAS applications to provide staff and
+                        students a unified authentication experience between several online services.</li>
+                        <li>Utilized test-driven development methodologies and repository design paradigm to effectively
+                          develop secure and well-documented applications.</li>
+              </ul>
+            </div>
         </section>
-    </main>
+          <section>
+          <h2>Training</h2>
+          <p></p>
+          <p></p>
+          <p></p>
+        </section>
+      </main>
+    </div><!--.site-->
   </body>
 </html>

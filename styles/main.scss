@@ -3,165 +3,181 @@
 @import '_typography';
 @import '_animations';
 
-$prime:#D95A00; 
-$white: lighten($prime, 95%);
-$black: darken($prime, 95%);
-$retro: #5E2971;
-$retro-light: lighten($retro, 95%);
-$base-font-size: 16;
-$base-font: 'Montserrat', sans-serif;
-$mordern-font-alt: 'Press Start 2P', cursive;
-$ratio: 1.618;
+$prime: #D95A00;
+$prime-darkest: darken($prime, 39.9%);
+$prime-lightest: lighten($prime, 60%);
+$compliment: #008875;
+$comp-lightest: lighten($compliment, 75%);
 
 html {
-    background-color: $white;
-    color: $black;
-    font-family: $base-font;
-    font-size: $base-font-size *1px;
-    font-weight: 200;
-
+  box-sizing: border-box;
 }
 
-h1 {
-    $value: pow($ratio, 3);
-    font-size: $value * 1rem;
-    line-height: line-height($base-font-size, $value, 1px);
-    font-weight: 100;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-h2 {
-    $value: pow($ratio, 2);
-    font-size: $value * 1rem;
-    line-height: line-height($base-font-size, $value, 1px);
-    font-weight: 100;
+body {
+  display: flex;
+  min-height: 100vh;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.618;
 }
 
-h3 {
-    $value: pow($ratio, 1);
-    font-size: $value * 1rem;
-    line-height: line-height($base-font-size, $value, 1px);
-    font-weight: 100;
+li {
+  &:before {
+    content: "\00BB \0020";
+  }
 }
 
-a {
-    color: $black;
-    text-decoration: none;
-
-    &:hover {
-        color: $prime;
-    }
-}
-
-section {
-    &.banner {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .banner-content {        
-        width: 67%;  
-    }
-
-    .banner-title {
-        margin-left: -0.38rem;
-    }
-
-    .banner-nav {
-        display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
-        width: 100%;
-
-        li {
-            list-style-type: none;    
-            padding-right: $ratio * 1rem;
-            padding-top: $ratio * 1rem;
-            font-size: 1.3rem;
-
-            &:nth-child(1) {
-                animation: fadein;
-                animation-duration: 3s
-            }
-            &:nth-child(3) {
-                animation: fadein;
-                animation-duration: 4s
-            }
-            &:nth-child(5) {
-                animation: fadein;
-                animation-duration: 5s
-            }
-        }
-    }
-
-    &.retro {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-
-        background-color: #431155;
-
-        .retro-title {
-            color: $retro-light;
-            text-shadow: 3px 2px #f90ac8;
-            font-family: 'outrun', cursive;
-            transform: rotate(-15deg);
-
-            span {
-                font-size: 80px;
-            }
-        }
-
-        .retro-title--alt {
-            font-family: $mordern-font-alt;
-            color: cyan;
-        }
-    }
-}
-
-.sun {
-    background: rgba(255,255,0,1);
-    background: linear-gradient(to bottom, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 36%, rgba(227,0,45,1) 67%, rgba(252,47,245,1) 100%);
-    
-    border-radius: 999px;
-    height: 125px;
-    width: 125px;
-    margin-top: -75px;
-    float: right;
-}
-
-
-@media screen and (max-width: 512px) {
-    
+.site {
+  width: 100%;
+  header {
+    background: $prime;
+    display: flex;
+    justify-content: center;
     section {
-        .banner-nav {
-            li {
-                font-size: 1.1rem;
-            }
-        }      
-    }
+      &.profile {
+        display: flex;
+        flex-direction: column;
+        .photo {
+          display: flex;
+          justify-content: center;
+          padding: 1.618rem 0;
+          .photo-frame {
+            border: 4px solid $prime-darkest;
+            margin: 1.618rem;
 
-    h1 {
-        $value: pow($ratio, 2);
-        font-size: $value * 1rem;
-        &.banner-title {
-            line-height: line-height(14, $value, 1px);
-            margin-left: -0.15rem;
+            &.diamond {
+              overflow: hidden;
+              transform: rotate(45deg);
+              width: 200px;
+              height: 200px;
+
+              .image {
+                width: 282px;
+                height: 282px;
+                transform: rotate(-45deg) translatex(5px) translateY(-64px); ;
+                background-image: url("https://placehold.it/282");
+              }
+            }
+          }
         }
+        .description {
+          text-align: center;
+          padding: 1.618rem 0;
+          h1 {
+            font-size: 1.618rem;
+            text-transform: uppercase;
+            letter-spacing: 0.618rem;
+            margin-left: 10px;
+          }
+          h2 {
+            font-size: 1.272rem;
+          }
+        }
+
+        .links {
+          display: flex;
+          justify-content: space-evenly;
+          font-size: 2.618rem;
+          padding: 0.618rem 0;
+          margin-bottom: 1.618rem;
+          a {
+            //color: $prime-darkest;
+            //border: 4px solid $prime-darkest;
+            color: #FF9A53;
+            border: 4px solid #FF9A53;
+            transform: rotate(45deg);
+            font-size: 1.618rem;
+            padding: 2px 7px;
+            
+            transition: all 0.3s ease;
+            
+            &:hover {
+              box-shadow: inset 0 0 0 25px $prime-darkest;
+              color: $comp-lightest;
+            }
+            
+            i {
+              line-height: inherit;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
     }
+  }
+
+  main {  
+    background-color: $comp-lightest;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     h2 {
-        $value: pow($ratio, 1);
-        font-size: $value * 1rem;
+      color: $comp-lightest;
+      font-size: 2.427rem;
+      font-weight: 900;
+      background: $prime-darkest;
+      display: inline-block;
+      padding: 0.618rem 1.618rem;
+      text-transform: uppercase;
     }
 
     h3 {
-        &.retro-title--alt {
-            word-spacing: -0.5rem;
-        }
+      font-size: 1.618rem;      
     }
+
+    section {
+      padding: 1.618rem 0;
+      
+      &:first-of-type { 
+        padding-top: 0;
+      }
+      
+      h2 {
+        margin-left: -1.618rem;
+      }
+
+      ul {
+        columns: 2;
+        list-style-position: inside;
+        li {
+          font-size: 1.618rem;
+          padding: 0 1.618rem;
+
+          span {
+            font-size: 18px; //1rem?
+          }
+        } 
+      }
+
+      &.skills {
+
+        p {
+          color: $prime-darkest;
+          padding: 1rem;
+          line-height: 1.618;
+        }
+      }
+
+      .content {
+        margin: 1.618rem 2.618rem;
+        text-align: left;
+
+        header {
+          margin-bottom: 1.618rem;
+        }
+
+        .group {
+          margin: 1.618rem 0;
+        }
+      }
+    }
+  }
+  section {
+    max-width: 960px;
+  }
 }
