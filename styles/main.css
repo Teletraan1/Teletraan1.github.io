@@ -57,7 +57,9 @@ html {
 }
 
 html {
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  line-height: 1.618;
 }
 
 @keyframes fadein {
@@ -80,8 +82,6 @@ html {
 body {
   display: flex;
   min-height: 100vh;
-  font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
   line-height: 1.618;
 }
 
@@ -97,6 +97,7 @@ li:before {
   background: #D95A00;
   display: flex;
   justify-content: center;
+  height: 90vh;
 }
 
 .site header section.profile {
@@ -154,8 +155,8 @@ li:before {
 }
 
 .site header section.profile .links a {
-  color: #0e0600;
-  border: 4px solid #0e0600;
+  color: #FF9A53;
+  border: 4px solid #FF9A53;
   transform: rotate(45deg);
   font-size: 1.618rem;
   padding: 2px 7px;
@@ -205,24 +206,30 @@ li:before {
   margin-left: -1.618rem;
 }
 
+.site main section h4 {
+  display: inline-block;
+  color: #D95A00;
+}
+
+.site main section .date {
+  color: #D95A00;
+}
+
+.site main section ul {
+  list-style-position: inside;
+}
+
+.site main section ul li {
+  padding: 0.618rem;
+}
+
 .site main section.skills p {
   color: #0e0600;
   padding: 1rem;
-  line-height: 1.618;
 }
 
 .site main section.skills ul {
   columns: 2;
-  list-style-position: inside;
-}
-
-.site main section.skills ul li {
-  font-size: 1.618rem;
-  padding: 0 1.618rem;
-}
-
-.site main section.skills ul li span {
-  font-size: 18px;
 }
 
 .site main section .content {

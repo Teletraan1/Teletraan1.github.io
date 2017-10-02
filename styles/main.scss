@@ -20,8 +20,6 @@ html {
 body {
   display: flex;
   min-height: 100vh;
-  font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
   line-height: 1.618;
 }
 
@@ -37,6 +35,8 @@ li {
     background: $prime;
     display: flex;
     justify-content: center;
+    height: 90vh;
+
     section {
       &.profile {
         display: flex;
@@ -140,17 +140,19 @@ li {
       h2 {
         margin-left: -1.618rem;
       }
+      h4 {
+        display: inline-block;
+        color: $prime;
+      }
+
+      .date {
+        color: $prime;
+      }
 
       ul {
-        columns: 2;
         list-style-position: inside;
         li {
-          font-size: 1.618rem;
-          padding: 0 1.618rem;
-
-          span {
-            font-size: 18px; //1rem?
-          }
+          padding: 0.618rem;
         } 
       }
 
@@ -159,7 +161,10 @@ li {
         p {
           color: $prime-darkest;
           padding: 1rem;
-          line-height: 1.618;
+        }
+
+        ul {
+          columns: 2;
         }
       }
 
