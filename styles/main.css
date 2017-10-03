@@ -127,7 +127,7 @@ li:before {
   width: 282px;
   height: 282px;
   transform: rotate(-45deg) translatex(5px) translateY(-64px);
-  background-image: url("https://placehold.it/282");
+  background-image: url("../img/me_282.jpg");
 }
 
 .site header section.profile .description {
