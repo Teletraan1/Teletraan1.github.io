@@ -15,10 +15,6 @@ html {
   @media screen and (max-width: 610px) {
     font-size: 16px;
   }
-
-  @media screen and (max-width: 544px) {
-    font-size: 14px;
-  }
 }
 
 *, *:before, *:after {
@@ -174,6 +170,10 @@ li {
 
         ul {
           columns: 2;
+          
+          @media screen and (max-width: 610px) {
+            columns: 1;
+          }
         }
       }
 

@@ -81,12 +81,6 @@ html {
   }
 }
 
-@media screen and (max-width: 544px) {
-  html {
-    font-size: 14px;
-  }
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -244,6 +238,12 @@ li:before {
 
 .site main section.skills ul {
   columns: 2;
+}
+
+@media screen and (max-width: 610px) {
+  .site main section.skills ul {
+    columns: 1;
+  }
 }
 
 .site main section .content {
