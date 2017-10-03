@@ -91,6 +91,7 @@ li:before {
 
 .site {
   width: 100%;
+  background: #D95A00;
 }
 
 .site header {
@@ -178,6 +179,7 @@ li:before {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-left: 2.618rem;
 }
 
 .site main h2 {
@@ -247,6 +249,11 @@ li:before {
 
 .site section {
   max-width: 960px;
+}
+
+.site footer {
+  height: 25vh;
+  background: #D95A00;
 }
  
 

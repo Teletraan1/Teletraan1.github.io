@@ -31,6 +31,7 @@ li {
 
 .site {
   width: 100%;
+  background: $prime;
   header {
     background: $prime;
     display: flex;
@@ -115,7 +116,7 @@ li {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
+    margin-left: 2.618rem;
     h2 {
       color: $comp-lightest;
       font-size: 2.427rem;
@@ -184,5 +185,10 @@ li {
   }
   section {
     max-width: 960px;
+  }
+
+  footer {
+    height: 25vh;
+    background: $prime;
   }
 }
