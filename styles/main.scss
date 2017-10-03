@@ -168,6 +168,21 @@ li {
           padding: 1rem;
         }
 
+        .factoid {
+          
+            width: 50%;
+          
+
+          @media screen and (min-width: 540px){
+            width: 33%;
+          }
+
+          @media screen and (min-width: 720px){
+            width: 25%;
+          }
+
+        }
+
         ul {
           columns: 2;
           
@@ -198,5 +213,20 @@ li {
   footer {
     height: 25vh;
     background: $prime;
+  }
+}
+
+.flex-group {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.factoid {
+  
+  text-align: center;
+
+  h3 {
+    color: $prime;
   }
 }

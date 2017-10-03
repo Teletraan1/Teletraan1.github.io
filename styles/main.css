@@ -236,6 +236,22 @@ li:before {
   padding: 1rem;
 }
 
+.site main section.skills .factoid {
+  width: 50%;
+}
+
+@media screen and (min-width: 540px) {
+  .site main section.skills .factoid {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .site main section.skills .factoid {
+    width: 25%;
+  }
+}
+
 .site main section.skills ul {
   columns: 2;
 }
@@ -266,6 +282,20 @@ li:before {
 .site footer {
   height: 25vh;
   background: #D95A00;
+}
+
+.flex-group {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.factoid {
+  text-align: center;
+}
+
+.factoid h3 {
+  color: #D95A00;
 }
  
 
