@@ -75,6 +75,18 @@ html {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 610px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
