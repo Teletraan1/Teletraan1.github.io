@@ -96,7 +96,7 @@ li {
             border: 4px solid #FF9A53;
             transform: rotate(45deg);
             font-size: 1.618rem;
-            padding: 2px 7px;
+            padding: 2px 6px;
             
             transition: all 0.3s ease;
             
@@ -170,15 +170,16 @@ li {
 
         .factoid {
           
-            width: 50%;
+          width: 100%;
           
+          padding: 0.618rem;
+
+          @media screen and (min-width: 440px) {
+           width: 50%; 
+          }
 
           @media screen and (min-width: 540px){
             width: 33%;
-          }
-
-          @media screen and (min-width: 720px){
-            width: 25%;
           }
 
         }
