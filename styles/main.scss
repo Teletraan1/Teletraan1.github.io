@@ -80,17 +80,17 @@ li {
           }
           h2 {
             font-size: 1.272rem;
+            margin-left: -6px;
           }
         }
 
         .links {
           display: flex;
 
-          justify-content: space-between;
-          
+          justify-content: space-between;          
           font-size: 2.618rem;
-          padding: 0.618rem 0;
-          margin-bottom: 1.618rem;
+          // padding: 0.618rem 0;
+          // margin-bottom: 1.618rem;
           a {
             //color: $prime-darkest;
             //border: 4px solid $prime-darkest;
@@ -98,8 +98,12 @@ li {
             border: 4px solid #FF9A53;
             transform: rotate(45deg);
             font-size: 1.618rem;
-            padding: 2px 6px;
+            padding: 2px 8px;
             
+            @media screen and (max-width: 610px) {
+              padding: 2px 7px;
+            }
+
             transition: all 0.3s ease;
             
             &:hover {
@@ -138,11 +142,6 @@ li {
     }
 
     section {
-      padding: 1.618rem 0;
-      
-      &:first-of-type { 
-        padding-top: 0;
-      }
       
       h2 {
         margin-left: -1.618rem;
@@ -164,6 +163,10 @@ li {
       }
 
       &.skills {
+
+        .content {
+          margin: 0;
+        }
 
         p {
           color: $prime-darkest;
@@ -197,8 +200,36 @@ li {
       }
 
       .content {
-        margin: 1.618rem 2.618rem;
+        margin: 0 2.618rem;
         text-align: left;
+
+        section {
+          margin: 1.618rem 0;
+
+          &:first-of-type {
+            margin-top: 2.618rem;
+          }
+
+          &:last-of-type {
+            margin-bottom: 2.618rem;
+          }
+        }
+
+        ul {
+          li {
+            padding: 0.618rem 0;
+          }
+        }
+
+        @media screen and (max-width: 520px) {
+          margin: 1.618rem 0.618rem;
+          
+          ul {
+            li {
+              font-size: 14px;
+            }
+          }
+        }
 
         header {
           margin-bottom: 1.618rem;
@@ -206,14 +237,6 @@ li {
 
         .group {
           margin: 1.618rem 0;
-        }
-
-        ul {
-          li {
-            @media screen and (max-width: 520px) {
-              font-size: 14px;
-            }
-          }
         }
       }
     }

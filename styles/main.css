@@ -57,9 +57,13 @@ html {
 }
 
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Hind", "sans-serif";
   font-size: 18px;
   line-height: 1.618;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "sans-serif";
 }
 
 @keyframes fadein {
@@ -151,14 +155,13 @@ li:before {
 
 .site header section.profile .description h2 {
   font-size: 1.272rem;
+  margin-left: -6px;
 }
 
 .site header section.profile .links {
   display: flex;
   justify-content: space-between;
   font-size: 2.618rem;
-  padding: 0.618rem 0;
-  margin-bottom: 1.618rem;
 }
 
 .site header section.profile .links a {
@@ -166,8 +169,14 @@ li:before {
   border: 4px solid #FF9A53;
   transform: rotate(45deg);
   font-size: 1.618rem;
-  padding: 2px 6px;
+  padding: 2px 8px;
   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 610px) {
+  .site header section.profile .links a {
+    padding: 2px 7px;
+  }
 }
 
 .site header section.profile .links a:hover {
@@ -202,14 +211,6 @@ li:before {
   font-size: 1.618rem;
 }
 
-.site main section {
-  padding: 1.618rem 0;
-}
-
-.site main section:first-of-type {
-  padding-top: 0;
-}
-
 .site main section h2 {
   margin-left: -1.618rem;
 }
@@ -229,6 +230,10 @@ li:before {
 
 .site main section ul li {
   padding: 0.618rem;
+}
+
+.site main section.skills .content {
+  margin: 0;
 }
 
 .site main section.skills p {
@@ -266,8 +271,33 @@ li:before {
 }
 
 .site main section .content {
-  margin: 1.618rem 2.618rem;
+  margin: 0 2.618rem;
   text-align: left;
+}
+
+.site main section .content section {
+  margin: 1.618rem 0;
+}
+
+.site main section .content section:first-of-type {
+  margin-top: 2.618rem;
+}
+
+.site main section .content section:last-of-type {
+  margin-bottom: 2.618rem;
+}
+
+.site main section .content ul li {
+  padding: 0.618rem 0;
+}
+
+@media screen and (max-width: 520px) {
+  .site main section .content {
+    margin: 1.618rem 0.618rem;
+  }
+  .site main section .content ul li {
+    font-size: 14px;
+  }
 }
 
 .site main section .content header {
@@ -276,12 +306,6 @@ li:before {
 
 .site main section .content .group {
   margin: 1.618rem 0;
-}
-
-@media screen and (max-width: 520px) {
-  .site main section .content ul li {
-    font-size: 14px;
-  }
 }
 
 .site section {
